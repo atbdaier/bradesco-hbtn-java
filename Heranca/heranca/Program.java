@@ -1,4 +1,4 @@
-package Heranca.heranca;
+
 
 public class Program {
 
