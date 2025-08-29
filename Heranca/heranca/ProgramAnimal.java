@@ -1,6 +1,6 @@
 
 
-public class Program {
+public class ProgramAnimal {
 
     public static void main(String[] args) {
         Animal meuAnimal = new Animal();
