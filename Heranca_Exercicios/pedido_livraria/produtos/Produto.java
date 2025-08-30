@@ -6,11 +6,10 @@ public abstract class Produto {
     private int ano;
     private String pais;
 
-    Produto(String titulo, int ano, String pais, double precoBruto) {
+    Produto(String titulo, int ano, double precoBruto) {
         this.titulo = titulo;
         this.precoBruto = precoBruto;
         this.ano = ano;
-        this.pais = pais;
     }
 
     public abstract double obterPrecoLiquido();
