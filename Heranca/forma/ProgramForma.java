@@ -1,4 +1,4 @@
-public class Program {
+public class ProgramForma {
     public static void main(String[] args) {
         FormaGeometrica formaGeometrica = new FormaGeometrica();
 
