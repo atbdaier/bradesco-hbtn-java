@@ -20,7 +20,7 @@ public class Pedido {
         double totalPrecoProdutos = 0.0;
         for (ItemPedido item : itens) {
             double totalItem = item.getProduto().obterPrecoLiquido() * item.getQuantidade();
-            System.out.printf("Tipo %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",
+            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
                     item.getProduto().getTitulo(),
                     item.getProduto().obterPrecoLiquido(),
