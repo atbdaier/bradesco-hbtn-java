@@ -24,7 +24,7 @@ public class GerenciamentoDeContatos {
                 System.out.println(nome + " já tem o email: " + email + " cadastrado!" );
             }
         } else {
-            System.out.println("Erro: Contato com nome " + nome + " já existe!\n");
+            System.out.println("Erro: Contato com nome " + nome + " já existe!");
         }
     }
 
@@ -35,7 +35,7 @@ public class GerenciamentoDeContatos {
             entry.getValue().exibirContato();
             System.out.println("-------------------------------");
         }
-        System.out.println();
+        //System.out.println();
     }
 
     // Busca um contato pelo nome
@@ -45,19 +45,19 @@ public class GerenciamentoDeContatos {
             System.out.println("Contato encontrado: " + nome);
             contato.exibirContato();
         } else {
-            System.out.println("Contato " + nome + " não encontrado.\n");
+            System.out.println("Contato " + nome + " não encontrado.");
         }
-        System.out.println();
+        //System.out.println();
     }
 
     // Remove um contato pelo nome
     public void removerContato(String nome) {
         if (contatos.containsKey(nome)) {
             contatos.remove(nome);
-            System.out.println("Contato " + nome + " removido com sucesso!\n");
+            System.out.println("Contato " + nome + " removido com sucesso!");
         } else {
             System.out.println("Contato " + nome + " não encontrado.");
-            System.out.println();
+            //System.out.println();
         }
 
     }
