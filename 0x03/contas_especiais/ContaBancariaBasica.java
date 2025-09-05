@@ -43,6 +43,9 @@ public class ContaBancariaBasica {
     public String getNumeracao() {
         return numeracao;
     }
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
     public double getSaldo() {
         return saldo;
     }
