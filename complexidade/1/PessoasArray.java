@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class PessoasArray {
 
     private String[] nomes;
@@ -23,7 +25,7 @@ public class PessoasArray {
         System.out.println("Procurando pelo nome: \"" + nome + "\"");
         for(int i = 0; i < nomes.length; i++) {
             System.out.println("Passando pelo indice:" + i);
-            if(nomes[i] == nome) {
+            if(Objects.equals(nome, nomes[i])) {
                 System.out.println("Nome pesquisado é " + nomes[i] + " que está na posição " + i);
                 found = true;
             }
