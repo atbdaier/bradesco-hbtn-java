@@ -1,0 +1,30 @@
+package produtos;
+
+public class Livro extends Produto{
+    private int paginas;
+    private String autor;
+    private int edicao;
+
+    public Livro(String titulo, int ano, String pais, double precoBruto, int paginas, String autor, int edicao) {
+        super(titulo, ano, precoBruto);
+        this.autor = autor;
+        this.edicao = this.edicao;
+    }
+
+    @Override
+    public double obterPrecoLiquido() {
+        return super.getPrecoBruto() * 1.15; // Adiciona 10% de imposto
+    }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getEdicao() {
+        return edicao;
+    }
+}
