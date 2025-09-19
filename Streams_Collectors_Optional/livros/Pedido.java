@@ -23,6 +23,7 @@ public class Pedido {
         return cliente;
     }
 
+    @Override
     public String toString() {
         return String.format("[%d] %s %s", codigo, produtos, cliente);
     }
