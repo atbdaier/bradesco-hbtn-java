@@ -1,22 +1,21 @@
 public class Consumidor extends Thread {
-    private Fila fila;
-    private int id;
+    private Buffer buffer;
 
-    public Consumidor(Fila fila, int id) {
-        this.fila = fila;
-        this.id = id;
+
+    public Consumidor(Buffer buffer) {
+        this.buffer = buffer;
     }
+
 
     @Override
     public void run() {
-        while(true){
-            try {
-                System.out.println("Consumidor " + id + " consumiu: " + fila.remover());
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+        try {
+            for (int i = 1; i <= 5; i++) {
+                buffer.consumir();
+                Thread.sleep(1500);
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
-
 }

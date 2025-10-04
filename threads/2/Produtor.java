@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Produtor extends Thread {
     private Fila fila;
     private int id;
@@ -9,8 +11,9 @@ public class Produtor extends Thread {
 
     @Override
     public void run() {
+        Random random = new Random();
         while(true){
-            int numeroAleatorio = (int)(Math.random() * 100);
+            int numeroAleatorio = random.nextInt(100);;
             fila.adicionar(numeroAleatorio);
             System.out.println("Produtor " + id + " produziu: " + numeroAleatorio);
             try {

@@ -1,28 +1,19 @@
 public class Produtor extends Thread {
-    private Fila fila;
-    private int id;
+    private Buffer buffer;
 
-    public Produtor(Fila fila, int id) {
-        this.fila = fila;
-        this.id = id;
+    public Produtor(Buffer buffer) {
+        this.buffer = buffer;
     }
 
     @Override
     public void run() {
-        while(true){
-            int numeroAleatorio = generateRandom();
-            fila.adicionar(numeroAleatorio);
-            System.out.println("Produtor " + id + " produziu: " + numeroAleatorio );
-            try {
+        try {
+            for (int i = 1; i <= 5; i++) {
+                buffer.produzir(i);
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
-
-    private int generateRandom() {
-        return (int)(Math.random() * 100);
-    }
-
 }
