@@ -10,7 +10,7 @@ public class Produtor extends Thread {
     @Override
     public void run() {
         while(true){
-            int numeroAleatorio = (int)(Math.random() * 100);
+            int numeroAleatorio = generateRandom();
             fila.adicionar(numeroAleatorio);
             System.out.println("Produtor " + id + " produziu: " + numeroAleatorio );
             try {
@@ -19,6 +19,10 @@ public class Produtor extends Thread {
                 Thread.currentThread().interrupt();
             }
         }
+    }
+
+    private int generateRandom() {
+        return (int)(Math.random() * 100);
     }
 
 }
